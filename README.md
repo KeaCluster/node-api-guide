@@ -15,3 +15,7 @@ This guide will walk you through creating a small-scale `Node.js API` using
 8. [Error Handling](08-error-handling.md)
 9. [Deploying](09-deploying.md)
 10. [Conclusion](10-conclusion.md)
+
+## LICENCE
+
+This guide is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
