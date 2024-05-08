@@ -5,16 +5,12 @@ This guide will walk you through creating a small-scale `Node.js API` using
 
 ## Table of Contents
 
-1. [Introduction](01-introduction.md)
-2. [Setup](02-setup.md)
-3. [Creating the Express Server](03-creating-server.md)
-4. [Defining data Model](04-defining-data-model.md)
-5. [CRUD operations](05-crud-operations.md)
-6. [Connecting DB](06-connecting-db.md)
-7. [Testing API](07-testing-api.md)
-8. [Error Handling](08-error-handling.md)
-9. [Deploying](09-deploying.md)
-10. [Conclusion](10-conclusion.md)
+1. [Introduction and setup](01-introduction-setup.md)
+2. [Creating the Express server](02-creating-server.md)
+3. [Defining Data Model](03-data-model.md)
+4. [Implementing CRUD Operations](04-crud-operations.md)
+5. [Connecting to the DB and Error Handling](05-connect-db-error-handling.md)
+6. [Testing and deploying the API](06-testing-deploying.md)
 
 ## LICENCE
 
