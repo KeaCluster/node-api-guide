@@ -1,10 +1,18 @@
 # Introduction and Setup
 
+<!--toc:start-->
+
+- [Introduction and Setup](#introduction-and-setup)
+  - [Introduction](#introduction)
+  - [Setup](#setup)
+
+<!--toc:end-->
+
 ## Introduction
 
 This guide (I hope) will guide you through a small-scale (useless for production)
- [`Node.js API`](https://nodejs.org/en) for managing a bookstore.
-We will implement [`Express.js`](https://expressjs.com/) for the server framework and 
+[`Node.js API`](https://nodejs.org/en) for managing a bookstore.
+We will implement [`Express.js`](https://expressjs.com/) for the server framework and
 [`Mongoose`](https://mongoosejs.com/) for a [`MongoDB`](https://www.mongodb.com/) interaction.
 ~~Jesus christ that's a lot of links~~
 
@@ -16,15 +24,15 @@ At least that's the idea.
 So, let's setup our environment.
 
 - Create the directory of the project
-    - Jk where the files go
-    - Name it whatever
+  - Jk where the files go
+  - Name it whatever
 - (Optional but recommended) initialize a git repo just in case
 - Initialize a `node.js` project.
 - Install dependencies
-    - We'll be using `express`, `mongoose`, `cors`.
-        - Express is our server.
-        - Mongoose is our MongoDB interaction thingy
-        - CORS for y'know, [CORS](https://aws.amazon.com/what-is/cross-origin-resource-sharing/).
+  - We'll be using `express`, `mongoose`, `cors`.
+    - Express is our server.
+    - Mongoose is our MongoDB interaction thingy
+    - CORS for y'know, [CORS](https://aws.amazon.com/what-is/cross-origin-resource-sharing/).
 
 Here's the list of commands just in case.
 
