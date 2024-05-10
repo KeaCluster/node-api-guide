@@ -1,7 +1,13 @@
 # Creating the Express Server
 
-So let's work on the server and some basic config like ports and stuff.
+<!--toc:start-->
 
+- [Creating the Express Server](#creating-the-express-server)
+  - [Server](#server)
+
+<!--toc:end-->
+
+So let's work on the server and some basic config like ports and stuff.
 
 ## Server
 
@@ -10,13 +16,13 @@ This will be the entry point of our application.
 It will configure and start the Express server.
 
 ```javascript
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
 
 // Initialize Express
 const app = express();
-app.use(cors());
+app.use(cors()); // yknow - for cors
 app.use(express.json()); // Middleware to prase JSON
 
 // Port stuff
