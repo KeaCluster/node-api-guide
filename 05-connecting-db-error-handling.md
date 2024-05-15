@@ -1,5 +1,14 @@
 # Conneting the Database
 
+<!--toc:start-->
+
+- [Conneting the Database](#conneting-the-database)
+  - [Setup DB](#setup-db)
+  - [Success and Errors](#success-and-errors)
+  - [Middleware](#middleware)
+
+<!--toc:end-->
+
 Now that our server _listens_ to requests,
 let's actually give it the function to modify data on our database.
 
