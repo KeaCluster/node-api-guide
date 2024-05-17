@@ -3,7 +3,7 @@
 # Site Settings
 title: "Node.js API guide"
 description: "Simple guide to start writing a small test api"
-baseurl: "/ node-api-guide eact-starter-guide"
+baseurl: "/node-api-guide"
 url: "https://keacluster.github.io"
 
 # Build Settings
