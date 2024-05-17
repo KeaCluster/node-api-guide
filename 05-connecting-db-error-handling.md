@@ -3,16 +3,32 @@
 <!--toc:start-->
 
 - [Conneting the Database](#conneting-the-database)
-  - [Setup DB](#setup-db)
+
+  - [Relational DB config](#relational-db-config)
+  - [Non-relational DB config](#non-relational-db-config)
   - [Success and Errors](#success-and-errors)
   - [Middleware](#middleware)
 
-<!--toc:end-->
+  <!--toc:end-->
 
 Now that our server _listens_ to requests,
 let's actually give it the function to modify data on our database.
 
-## Setup DB
+## Relational DB config
+
+```javascript
+const sequelize = require("./config/database");
+const Book = require("./models/book"); // import Book model created in the prev section
+
+// Connection
+
+sequelize
+  .sync()
+  .then(() => console.log("Databse synced"))
+  .catch((err) => console.error("Could not connect to DB", err));
+```
+
+## Non-relational DB config
 
 First let's connect to MongoDB using Mongoose inside `server.js`.
 We'll add some connection options to handle potential deprecation warnings
@@ -31,7 +47,7 @@ mongoose
 
 Let's add some middleware to log errors and handle unexpected results.
 
-## Middleware
+### Middleware
 
 Y'know.
 Middleware functions that have access to the request object (`req`),

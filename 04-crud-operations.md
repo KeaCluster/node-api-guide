@@ -4,9 +4,13 @@
 
 - [Implementing CRUD operations](#implementing-crud-operations)
   - [How to CRUD](#how-to-crud)
+  - [Relational Database protocols](#relational-database-protocols)
+  - [Non-relational Database protocols](#non-relational-database-protocols)
     - [GET](#get)
     - [POST](#post)
     - [PUT](#put)
+    - [DELETE](#delete)
+  - [Implement](#implement)
 
 <!--toc:end-->
 
