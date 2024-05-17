@@ -14,8 +14,4 @@ This guide will walk you through creating a small-scale `Node.js API` using
 
 > [!TIP]
 > Dont' stop here.
-> Add some `JWT` functionality or some _realtional_ database instead of MongoDB.
-
-## LICENCE
-
-This guide is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+> Add some `JWT` functionality or extra middleware/secure options.
