@@ -28,6 +28,21 @@ So, let's setup our environment.
 - Create the directory of the project
   - You know, where the files go
   - Name it whatever (bookstore-api)
+
+Your file structure should look something like so although you can change it:
+
+```sh
+bookstore-api/
+├── config/
+│   └── database.js         # Database configuration (for relational DB)
+├── models/
+│   └── book.js             # Book model
+├── routes/
+│   └── bookRoutes.js       # Routes for book CRUD operations
+├── server.js               # Main server file
+└── .env                    # Environment variables
+```
+
 - (Optional but recommended) initialize a git repo just in case
 - Initialize a `node.js` project.
 - Install dependencies

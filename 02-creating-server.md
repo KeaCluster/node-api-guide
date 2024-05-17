@@ -11,13 +11,12 @@ So let's work on the server and some basic config like ports and stuff.
 
 ## Server
 
-Create a new file `server.js`.
+Create a new file `server.js` if you don't have it already.
 This will be the entry point of our application.
 It will configure and start the Express server.
 
 ```javascript
 const express = require("express");
-const mongoose = require("mongoose");
 const cors = require("cors");
 
 // Initialize Express

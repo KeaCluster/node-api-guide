@@ -23,15 +23,90 @@ Follow best practices and implementations.
 
 These are our objectives:
 
-- Setup MongoDB connection
-  - Connect to MongoDB using Mongoose in `server.js`
+- Setup Database connection (either case)
+  - Connect to the database through `server.js`
   - Configure connection options to handle potential deprecation
 - Handle connection success and Errors
   - Log a message to know if the connection is successful
-  - Handle connection errors
 - Add Error handling middleware
   - Add middleware functions to handle errors
   - Log or send appropiate responses to the client's request
+
+We'll handle simple CRUD endpoints for our api.
+You'll see by the end, they're rather similar with slight differences regarding middleware functions.
+
+## Relational Database protocols
+
+```javascript
+const express = require("express");
+const Book = require("./models/book"); // Import Book model
+
+// Define routes
+const router = express.Router();
+
+// Get all books
+router.get("/", async (req, res) => {
+  try {
+    const books = await Book.findAll();
+    res.json(books);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Get one book
+router.get("/:id", getBook, (req, res) => {
+  res.json(res.book);
+});
+
+// Add a new book
+router.post("/", async (req, res) => {
+  try {
+    const book = await Book.create(req.body);
+    res.status(201).json(book);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Update a book
+router.put("/:id", getBook, async (req, res) => {
+  try {
+    await res.book.update(req.body);
+    res.json(res.book);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// Delete a book
+router.delete("/:id", getBook, async (req, res) => {
+  try {
+    await res.book.destroy();
+    res.json({ message: "Deleted Book" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// Middleware function to get book by ID
+async function getBook(req, res, next) {
+  try {
+    const book = await Book.findByPk(req.params.id);
+    if (book == null) {
+      return res.status(404).json({ message: "Cannot find book" });
+    }
+    res.book = book;
+    next();
+  } catch (err) {
+    return res.status(500).json({ message: err.message });
+  }
+}
+
+module.exports = router;
+```
+
+## Non-relational Database protocols
 
 ### GET
 
@@ -157,8 +232,9 @@ router.delete("/:id", getBook, async (req, res) => {
 ## Implement
 
 To add these routes inside our server just add the following lines in `server.js`
+There is **no** difference regarding this implementation for either db.
 
 ```javascript
-const bookRoutes = require("./routes/bookRoutes"); // Adjust as per your strcture
-app.use("/books", booRoutes);
+const bookRoutes = require("./routes/bookRoutes"); // Adjust as per your structure
+app.use("/books", bookRoutes);
 ```
