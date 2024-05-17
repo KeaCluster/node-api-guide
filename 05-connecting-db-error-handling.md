@@ -43,6 +43,43 @@ mongoose
   .catch((err) => console.error("Could not connect to MongoDB", err));
 ```
 
+## Environment variables
+
+To keep our `database` credentials more secure,
+we can implement a `.env` file at the root of our project.
+As of `Node v 20+`,
+we have available a command to find and configure env variables automatically
+
+Inside the .env file:
+
+```env
+# For MongoDB
+MONGODB_URI="mongodb://localhost:27017/bookstore"
+
+# For PostgreSQL
+DATABASE_URL="postgres://your_username:your_password@localhost:5432/your_database_name"
+
+```
+
+Make sure to use update the data with your proper credentials
+
+Now, when running the server, just add the following flag to the command:
+
+```sh
+node --env-file=.env server.js
+```
+
+Alternatively, you can add a script inside your `package.json` to do that automatically:
+
+```json
+"scripts": {
+  "dev": "node --env-file=.env server.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+
+With this you can run `npm run dev` and it will automatically execute the parameters.
+
 ## Success and Errors
 
 Let's add some middleware to log errors and handle unexpected results.
