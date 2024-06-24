@@ -48,7 +48,7 @@ curl -X DELETE http://localhost:3000/books/{id}
 ## Conclusion
 
 By following this guide,
-you have created a small-scale Node.js API for "managing" a bookstore (I wish).
+you have created a small-scale Node.js API for "managing" a bookstore (hopefully).
 
 You have learned to set up an Express server, define a Mongoose model,
 implement `CRUD` operations, connect to `MongoDB`, handle errors,

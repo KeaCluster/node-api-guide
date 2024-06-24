@@ -1,6 +1,6 @@
 # Building a small scale Node API
 
-This guide will walk you through creating a small-scale `Node.js API` using
+This guide will walk you through creating a tiny-scale `Node.js API` using
 [Express](https://expressjs.com/)
 
 ## Table of Contents
@@ -14,4 +14,8 @@ This guide will walk you through creating a small-scale `Node.js API` using
 
 > [!TIP]
 > Dont' stop here.
-> Add some `JWT` functionality or extra middleware/secure options.
+> Add some `JWT` functionality and/or extra middleware/secure options.
+
+## LICENCE
+
+CC0 1.0 Universal baby
